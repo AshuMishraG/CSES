@@ -1,5 +1,0 @@
-# Ignore files without extensions
-*.[!e][!x][!e]
-
-# Ignore .exe files
-*.exe
