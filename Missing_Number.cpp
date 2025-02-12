@@ -1,23 +1,19 @@
 #include <iostream>
-#include <vector>
+using namespace std;
+using ll = long long;
+using ull = unsigned long long;
+#define ff first
+#define ss second
 
 int main() {
-  int n;
-  std::cin >> n;
+  ll n, num, sum = 0;
+  cin >> n;
 
-  std::vector<int> numbers(n - 1);
-  for (int &num : numbers) {
-    std::cin >> num;
+  for (int i = 0; i < n - 1; ++i) {
+    cin >> num;
+    sum += num;
   }
+  cout << (n * (n + 1) / 2) - sum << endl;
 
-  int expected_sum = n * (n + 1) / 2;
-  int actual_sum = 0;
-
-  for (int num : numbers) {
-    actual_sum += num;
-  }
-
-  int missing = expected_sum - actual_sum;
-
-  std::cout << missing;
+  return 0;
 }
